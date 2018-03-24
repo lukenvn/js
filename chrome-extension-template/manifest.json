@@ -1,0 +1,38 @@
+{
+  "manifest_version": 2,
+  "name": "Chrome-Extension-Template",
+  "version": "0.0.0.1",
+  "description": "Hope this help!",
+  "icons": {
+    "20": "images/example-icon-20.png",
+    "24": "images/example-icon-24.png",
+    "32": "images/example-icon-32.png",
+    "48": "images/example-icon-48.png",
+    "64": "images/example-icon-64.png",
+    "128": "images/example-icon-128.png"
+  },
+  "permissions": ["<all_urls>","activeTab", "declarativeContent"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "run_at": "document_end",
+      "css": [
+        "css/bootstrap.css"
+      ],
+      "js": [
+        "scripts/jquery.js",
+        "scripts/bootstrap.js",
+        "scripts/content.js"
+      ]
+    }
+  ],
+  "page_action": {
+    "default_icon":  "images/example-icon-32.png",
+    "default_popup": "html/popup.html",
+    "default_title": "Click here!"
+  },
+  "background": {
+    "scripts": ["scripts/background.js"]
+  }
+}
+
